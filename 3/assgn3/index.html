@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Assignment 3</title>
+</head>
+<body>
+    <p>Fields marked (*) are required </p>
+    <div>
+        <form action="../../2/submit.html">
+            <fieldset>
+                <legend>Input Text Field Validation</legend>
+                <div>
+                    <label for="fname">First name</label>
+                    <input type="text" name="fname">
+                </div>
+                <div>
+                    <label for="lname">Last name</label>
+                    <input type="text" name="lname">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Email and URL Validation</legend>                
+                <div>
+                    <label for="email">Email*</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div>
+                    <label for="web">Website*</label>
+                    <input type="url" name="web" required>
+                </div>                
+            </fieldset>
+
+            <fieldset>
+                <legend>Mobile or Phone Number Validation</legend>
+                <div>
+                    <label for="mob">Mobile*</label>
+                    <input type="number" name="mob" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Dropdown Validation</legend>
+                <div>
+                    <label for="countries">Country</label>
+                    <input type="text" name="countries" list="countList">                    
+                </div>                
+            </fieldset>
+            <datalist id="countList">
+                <option value="India">
+                <option value="Argentina">
+                <option value="Brazil">
+                <option value="Germany">
+                <option value="Spain">
+                <option value="Italy">
+            </datalist>
+
+            <fieldset>
+                <legend>Number Validation With Specific Range</legend>
+                <div>
+                    <label for="postcode">Post Code*</label>
+                    <input type="number" name="postcode" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Textarea Validation</legend>
+                <div>
+                    <label for="addr">Address*</label>
+                    <input type="text" name="addr" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Checkbox and Radio Button Validation</legend>
+                <div>
+                    <label for="tc">Agree to T & C*</label>
+                    <input type="checkbox" name="tc" required>                    
+                </div>
+                <div>
+                    <label for="gender">Gender*</label>
+                    <div>
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female 
+                        <input type="radio" name="gender" value="other"> Other
+                    </div>                    
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Password Validation Using Patterns</legend>
+                <div>
+                    <label for="pass">Password*</label>
+                    <input type="password" name="pass" required>
+                </div>
+            </fieldset>
+
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+</body>
+</html>
