@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS example 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div#one {
+            background-color: #95f192;
+            text-align: center;
+            padding: 2em;
+        }
+
+        div#two {
+            background-color: #6c5dec;
+            width: calc(25% - 20px);
+            height: 200px;       
+            padding: 10px;   
+        }
+
+        div#three {
+            background-color: #ecc65d;
+            width: 75%;
+            margin: -220px 0 0 25%;
+            height: 200px;
+            padding: 10px 0;
+        }
+
+        h2 {
+            margin: auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        p {
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
+            margin: 20px;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="one">
+        <h1>first div</h1>
+    </div>
+
+    <div id="two">
+        <h2>second div</h2>
+    </div>
+
+    <div id="three">
+        <p>Lorem ipsum dolor sit amet, <span>consectetur</span> adipiscing elit, sed do </p>
+    </div>
+</body>
+</html>
