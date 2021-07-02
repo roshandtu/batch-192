@@ -1,0 +1,9 @@
+CSS (in general order of precedence)
+    Inline
+    Internal
+    External
+
+selector {
+    property: value;        /*Declaration*/
+}
+
