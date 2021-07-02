@@ -23,7 +23,7 @@ legend {
 }
 
 input {
-    border: solid 1px green;
+    border: solid 2px green;
 }
 
 input[type="submit"] {
@@ -31,6 +31,8 @@ input[type="submit"] {
     color: white;
     position: relative;
     left: 50%;
+    padding: 1px 20px;
+    font-size: 17px;    
 }
 
 /* input[type="checkbox"] {
