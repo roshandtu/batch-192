@@ -5,36 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+        }
+
+        div {
+            padding: 20px;
+            width: calc(50% - 40px);
+        }
+        div#nav {
+            left: 0;
+        }
+        div#info {
+            right: 0;
+        }
+
+        p {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        span {
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        div > ul > li {
+            margin-top: 5px;
+            background-color: rgba(30, 30, 30, 0.2);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+
 </head>
 <body>
-    <ul>
-        <li>Day 1
-            <ul>
-                <!-- <li><a href="1/first.html">1</a></li> -->
-                <li><a href="1/frames/index.html">Assignment 1</a></li>
-            </ul>
-        </li>
-        <li>Day 2
-            <ul>
-                <li><a href="2/assgn2/index.html">Assignment 2</a></li>
-            </ul>
-        </li>
-        <li>Day 3
-            <ul>
-                <li><a href="3/css-1.html">CSS1</a></li>
-                <li><a href="3/css2.html">CSS2</a></li>
-                <li><a href="3/css_task_1.html">Task 1</a></li>
-            </ul>
-        </li>
+    <div id="nav">
+        <ul>
+            <li>Day 1
+                <ul>
+                    <!-- <li><a href="1/first.html">1</a></li> -->
+                    <li><a href="1/frames/index.html">Assignment 1</a></li>
+                </ul>
+            </li>
+            <li>Day 2
+                <ul>
+                    <li><a href="2/assgn2/index.html">Assignment 2</a></li>
+                </ul>
+            </li>
+            <li>Day 3
+                <ul>
+                    <li><a href="3/css-1.html">CSS1</a></li>
+                    <li><a href="3/css2.html">CSS2</a></li>
+                    <li><a href="3/css_task_1.html">Task 1</a></li>
+                </ul>
+            </li>
 
-        <li>Extras
-            <ul>
-                <li><a href="xtra/index.html">div version of Assignment 2</a></li>
-            </ul>
-        </li>
-    </ul>
+            <li>Extras
+                <ul>
+                    <li><a href="xtra/index.html">div version of Assignment 2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 
-    <h3>GitHub repo: <a target="_blank" href="https://github.com/roosafeed/batch-192">click here</a></h3>
-    <p>Note: To view the pages not mentioned in the list, use the path as given in the repo</p>
+    <div id="info">
+        <h3>GitHub repo: <a target="_blank" href="https://github.com/roosafeed/batch-192">click here</a></h3>
+        <p>Note: To view the pages not mentioned in the list, use the path as given in the repo</p>
+        <p>eg: https://batch192.netlify.app<span>/2/datalist.html</span></p>
+    </div>
+    
 </body>
 </html>
