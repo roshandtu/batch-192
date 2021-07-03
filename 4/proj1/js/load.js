@@ -1,16 +1,23 @@
-var a;
+var loader = document.getElementById('loader');
+
 function load(page, cont, own = null) {
+    loader.style.display = "block";
     xhr = new XMLHttpRequest();
     xhr.onload = function () {
         cont.innerHTML = this.responseText;
+        loader.style.display = "none";
         if (own != null) {
             document.querySelector('.nav-item.active').classList.remove('active')
-            while(own.parentElement.tagName.toUpperCase() != 'LI'){
+            while (own.parentElement.tagName.toUpperCase() != 'LI') {
                 own = own.parentElement;
             }
             own.parentElement.classList.add('active');
         }
     }
+    xhr.onerror = function () {
+        loader.style.display = "none";
+    }
+
     xhr.open('GET', page);
     xhr.send();
 }
