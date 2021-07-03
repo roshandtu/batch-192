@@ -1,0 +1,62 @@
+<h1>Return an item</h1>
+
+<div class="container">
+    <div class="alert alert-info" role="alert">
+        <strong>Fiels marked with <span></span>* are required</strong>
+    </div>
+
+    <form action="#" class="needs-validation">
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="email" class="col-sm-1-12 col-form-label">Email*</label>
+            </div>
+            <div class="col-sm-5">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email address" required>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="ordern" class="col-sm-1-12 col-form-label">Order#*</label>
+            </div>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" name="ordern" id="ordern"
+                    placeholder="The order # of the item you want to return" required>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="reason" class="col-sm-1-12 col-form-label">Reason for returning</label>
+            </div>
+            <div class="col-sm-5">
+                <select name="reason" id="reason" class="custom-select">
+                    <option selected>Select a reason...</option>
+                    <option value="damaged">Received a defective product</option>
+                    <option value="dislike">I did not like the product</option>
+                    <option value="late">The delivery is taking longer than expected</option>
+                    <option value="address">I gave the wrong delivery address</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <button type="submit" class="btn btn-primary">Return</button>
+            </div>
+        </div>
+        <!-- <fieldset class="form-group row">
+            <legend class="col-form-legend col-sm-1-12">Group name</legend>
+            <div class="col-sm-1-12">
+                
+            </div>
+        </fieldset>
+        <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">Action</button>
+            </div>
+        </div> -->
+    </form>
+</div>

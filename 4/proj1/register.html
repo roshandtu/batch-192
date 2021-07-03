@@ -1,1 +1,79 @@
-<h1>Reg</h1>
+<h1>Register</h1>
+
+<div class="container">
+    <div class="alert alert-info" role="alert">
+        <strong>Fiels marked with <span></span>* are required</strong>
+    </div>
+
+    <form action="#" class="needs-validation">
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="fname" class="col-sm-1-12 col-form-label">First Name*</label>
+            </div>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" name="fname" id="fname" placeholder="First Name" required>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="lname" class="col-sm-1-12 col-form-label">Last Name</label>
+            </div>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" name="fname" id="lname" placeholder="Last Name">
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="email" class="col-sm-1-12 col-form-label">Email*</label>
+            </div>
+            <div class="col-sm-5">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email address" required>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="pass" class="col-sm-1-12 col-form-label">Password*</label>
+            </div>
+            <div class="col-sm-5">
+                <input type="password" class="form-control" name="pass" id="pass" placeholder="Create a password"
+                    required>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="mob" class="col-sm-1-12 col-form-label">Mobile Number*</label>
+            </div>
+            <div class="col-sm-5">
+                <input type="number" class="form-control" name="mob" id="mob" placeholder="Mobile Number" required>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="addr" class="col-sm-1-12 col-form-label">Address</label>
+            </div>
+            <div class="col-sm-5">
+                <textarea class="form-control" rows="5" id="addr" name="addr"></textarea>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-5 custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="tc" name="tc" required>
+                <label for="tc" class="custom-control-label">I agree to the terms and conditions</label>
+            </div>
+        </div>
+
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+        </div>
+    </form>
+</div>

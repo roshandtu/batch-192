@@ -1,1 +1,51 @@
-<h1>Contact Us</h1>
+<h1>Register</h1>
+
+<div class="container">
+    <div class="alert alert-info" role="alert">
+        <strong>Fiels marked with <span></span>* are required</strong>
+    </div>
+
+    <form action="#" class="needs-validation">
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="fname" class="col-sm-1-12 col-form-label">Your Name*</label>
+            </div>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" name="fname" id="fname" placeholder="Your Name" required>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="email" class="col-sm-1-12 col-form-label">Email*</label>
+            </div>
+            <div class="col-sm-5">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email address" required>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="feedback" class="col-sm-1-12 col-form-label">Feedback</label>
+            </div>
+            <div class="col-sm-5">
+                <textarea class="form-control" rows="5" id="feedback" name="feedback"></textarea>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-5 custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="tc" name="tc" required>
+                <label for="tc" class="custom-control-label">I wish to be contacted on my email ID regarding this feedback</label>
+            </div>
+        </div>
+
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
