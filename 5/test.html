@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <style>
+        pi {
+            font-size: 50px;
+            font-weight: 100;
+        }
+    </style>
+</head>
+
+<body bgcolor=lightgrey>
+    <h1 color=green>
+        <center>
+            <pi>Contact Us</pi>
+        </center>
+        <marquee width=100% behavior=Scroll direction=left scrollamount=25 bgcolor="red">
+            <font size=15 weight=100>Contact Us for any query</font>
+        </marquee>
+    </h1>
+    <script>
+        function fun() {
+            var a = f1.t1.value;
+            var b = f1.t2.value;
+            var c = f1.t3.value;
+            var d = f1.t4.value;
+            if (a == "") {
+                alert("Name is empty");
+                f1.t1.focus();
+            }
+            else if (isNaN(c)) //is not a number
+            {
+                alert("Please Enter a Number");
+                f1.t3.focus();
+            }
+            else if (b == "") {
+                alert("The email is empty");
+                f1.t2.focus();
+            }
+            else if (c == "") {
+                alert("Mobile No. is empty");
+                f1.t3.focus();
+            }
+            else if (c.length != 10) {
+                alert("Please Enter a Number with 10 digits only");
+                f1.t3.focus();
+            }
+
+            else if (d == "") {
+                alert("Enter query");
+                f1.t4.focus();
+            }
+        }
+    </script>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3557525829037!2d73.92308841436866!3d18.51281907424425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c18d4b594d2d%3A0xdce81805140db5c0!2sMphasis!5e0!3m2!1sen!2sin!4v1625035720485!5m2!1sen!2sin"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+    <form action="" name="f1">
+        <table>
+            <tr>
+                <td>name
+                <td><input type="text" name="t1" size=20 />
+            </tr>
+            <tr>
+                <td>Email
+                <td><input type=email name="t2" size=20 />
+            </tr>
+            <tr>
+                <td>Mobile no.
+                <td><input type="text" name="t3" size=20 />
+            </tr>
+            <tr>
+                <td>Queries
+                <td><input type="text" name="t4" size=20 />
+            </tr>
+            <tr>
+                <td><input type=button value=Register onClick='fun()'>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

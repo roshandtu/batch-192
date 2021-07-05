@@ -1,0 +1,87 @@
+<h1>Return an item</h1>
+
+<div class="container">
+    <div id="form-error-alert" class="alert alert-danger hide" role="alert">
+        <strong>Error</strong>
+        <p>Correct all the errors</p>
+    </div>
+
+    <div class="alert alert-info" role="alert">
+        <strong>Fiels marked with <span></span>* are required</strong>
+    </div>
+
+    <form name="ret-form" action="../../2/submit.html" class="needs-validation" novalidate>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="email" class="col-sm-1-12 col-form-label">Email*</label>
+            </div>
+            <div class="col-sm-5">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email address" required>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="ordern" class="col-sm-1-12 col-form-label">Order#*</label>
+            </div>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" name="ordern" id="ordern"
+                    placeholder="The order # of the item you want to return" required>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="reason" class="col-sm-1-12 col-form-label">Reason for returning</label>
+            </div>
+            <div class="col-sm-5">
+                <select name="reason" id="reason" class="custom-select">
+                    <option value="" selected>Select a reason...</option>
+                    <option value="damaged">Received a defective product</option>
+                    <option value="dislike">I did not like the product</option>
+                    <option value="late">The delivery is taking longer than expected</option>
+                    <option value="address">I gave the wrong delivery address</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <button type="submit" class="btn btn-primary">Return</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.querySelector('form[name="ret-form"]').addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        var em = document.querySelector('form[name="ret-form"]').querySelector('input[name="email"]'),
+            ord = document.querySelector('form[name="ret-form"]').querySelector('input[name="ordern"]'),
+            res = document.querySelector('form[name="ret-form"]').querySelector('select[name="reason"]');
+
+        var l = [ord, em, res];
+
+        var errCount = 0;
+        for (var i = 0; i < l.length; i++) {
+            if (l[i].value == "") {
+                l[i].classList.add('err-input');
+                errCount++;
+            }
+            else {
+                l[i].classList.remove('err-input');
+            }
+        }
+
+        if (errCount > 0) {
+            e.preventDefault();
+            document.getElementById('form-error-alert').classList.remove('hide');
+        }
+        else {
+            document.getElementById('form-error-alert').classList.add('hide');
+        }
+    })
+</script>

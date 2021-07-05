@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        input {
+            font-size: 1.2em;
+            margin: 3px 0;
+            padding: 3px;
+        }
+    </style>
+    <script>
+        
+    </script>
+</head>
+
+<body>
+    <form action="../2/submit.html" name="form1">
+        <input type="text" name="fname" placeholder="Full name" /><br>
+        <input type="text" name="rollno" placeholder="Roll Number" /> <br>
+        <input type="text" name="addr" placeholder="Address" /> <br>
+        <input type="text" name="num" placeholder="Mobile Number" /> <br>
+        <button type="button" name="sub">Submit</button>
+    </form>
+    <p style="color: red;" id="err"></p>
+</body>
+<script>
+    (() => {
+        document.querySelector('button[name="sub"]').addEventListener('click', () => {
+            var n = form1.fname,
+                r = form1.rollno,
+                a = form1.addr,
+                m = form1.num;
+
+            // validate input
+            if(n.value == ""){
+                err.innerText = "Name cannot be blank";
+                n.focus();
+            }
+
+            else if(r.value == "" || isNaN(r.value)){
+                err.innerText = "Enter a proper Roll number";
+                r.focus();
+            }
+
+            else if(a.value == ""){
+                err.innerText = "Address cannot be blank";
+                a.focus();
+            }
+
+            else if(m.value == "" || m.value.length != 10 || isNaN(m.value)){
+                err.innerText = "Enter a valid mobile number";
+                m.focus();
+            }
+
+            else {
+                err.innerText = "";
+                form1.submit();
+            }
+        });
+    })();
+
+</script>
+
+</html>

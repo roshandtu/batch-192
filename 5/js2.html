@@ -10,23 +10,34 @@
 
 <body>
     <input type="number" id="num1" />
-    <input type="number" id="num2" />
+    <input type="number" id="num2" /> <br><br>
     <input type="button" id="add" value="+" />
     <input type="button" id="mul" value="x" />
     <input type="button" id="div" value="/" />
     <input type="button" id="sub" value="-" />
 
     <h1 id="result"></h1>
+    <p id="err"></p>
 
 
 </body>
 <script>
     (function () {
         // "use strict";
-        function getVal(){
+
+        function getVal() {
             var num1 = parseFloat(document.getElementById('num1').value),
                 num2 = parseFloat(document.getElementById('num2').value);
-            
+
+            if (isNaN(num1) || isNaN(num2)) {
+                err.innerText = "Enter a valid number";
+                num1 = 0;
+                num2 = 0;
+            }
+            else {
+                err.innerText = "";
+            }
+
             return [num1, num2];
         }
 

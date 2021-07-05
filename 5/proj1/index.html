@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 4 - Online Shopping</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">SHOP</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" data-href="home.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <span class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Clothes
+                    </span>
+                    <div class="dropdown-menu">
+                        <a class="nav-link text-dark dropdown-item" href="#" data-href="men.html">Men's Wear</a>
+                        <a class="nav-link text-dark dropdown-item" href="#" data-href="women.html">Women's Wear</a>
+                        <a class="nav-link text-dark dropdown-item" href="#" data-href="kids.html">Kid's Wear</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#login-modal">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-href="register.html">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-href="return.html">Return</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-href="contact.html">Feedback</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+    </div>
+
+    <div class="modal" id="login-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Login to your account</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+
+                <form name="login-form" action="../../2/submit.html" class="needs-validation" novalidate>
+                    <div class="modal-body">
+                        <div class="row mt-2">
+                            <div class="col-sm-3">
+                                <label for="email" class="col-sm-1-12 col-form-label">Email</label>
+                            </div>
+                            <div class="col-sm-5">
+                                <input type="email" class="form-control" name="email" id="email"
+                                    placeholder="Email address" required>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-sm-3">
+                                <label for="pass" class="col-sm-1-12 col-form-label">Password</label>
+                            </div>
+                            <div class="col-sm-5">
+                                <input type="password" class="form-control" name="pass" id="pass"
+                                    placeholder="Enter your password" required>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2 hide" id="login-error">
+                            <div class="col">
+                                <p style="color: var(--red);">Both fields are required</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="modal-footer">
+                        
+                        <div class="row mt-2">
+                            <div class="col-sm-3">
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="loader">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/load.js" defer></script>
+</body>
+<script>
+    document.querySelector('form[name="login-form"]').addEventListener('submit', (e) => {
+
+        var uname = document.querySelector('form[name="login-form"]').querySelector('input[name="email"]'),
+            pass = document.querySelector('form[name="login-form"]').querySelector('input[name="pass"]');
+
+        var errCount = 0;
+        if (uname.value == "") {
+            uname.classList.add('err-input');
+            errCount++;
+        }
+        else {
+            uname.classList.remove('err-input');
+        }
+
+        if (pass.value == "") {
+            pass.classList.add('err-input');
+            errCount++;
+        }
+        else {
+            pass.classList.remove('err-input');
+        }
+
+        if (errCount > 0) {
+            e.preventDefault();
+            document.getElementById('login-error').classList.remove('hide');
+        }
+        else {
+            document.getElementById('login-error').classList.add('hide');
+        }
+    })
+</script>
+
+
+</html>
