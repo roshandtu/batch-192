@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 2</title>
+</head>
+
+<body>
+    <input type="number" id="num1" />
+    <input type="number" id="num2" />
+    <input type="button" id="add" value="+" />
+    <input type="button" id="mul" value="x" />
+    <input type="button" id="div" value="/" />
+    <input type="button" id="sub" value="-" />
+
+    <h1 id="result"></h1>
+
+
+</body>
+<script>
+    (function () {
+        // "use strict";
+        function getVal(){
+            var num1 = parseFloat(document.getElementById('num1').value),
+                num2 = parseFloat(document.getElementById('num2').value);
+            
+            return [num1, num2];
+        }
+
+        document.getElementById('add').addEventListener('click', () => {
+            var val = getVal();
+
+            document.getElementById('result').innerText = val[0] + " + " + val[1] + " = " + (val[0] + val[1]);
+        });
+
+        document.getElementById('sub').addEventListener('click', () => {
+            var val = getVal();
+
+            document.getElementById('result').innerText = val[0] + " - " + val[1] + " = " + (val[0] - val[1]);
+        });
+
+        document.getElementById('mul').addEventListener('click', () => {
+            var val = getVal();
+
+            document.getElementById('result').innerText = val[0] + " x " + val[1] + " = " + (val[0] * val[1]);
+        });
+
+        document.getElementById('div').addEventListener('click', () => {
+            var val = getVal();
+
+            document.getElementById('result').innerText = val[0] + " / " + val[1] + " = " + (val[0] / val[1]);
+        });
+    })();
+</script>
+
+</html>
