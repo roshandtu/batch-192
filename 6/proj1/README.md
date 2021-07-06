@@ -1,32 +1,12 @@
 # Batch 192
 
-Assignment 4 - Online shopping site
+Assignment 6 - Online shopping site + jQuery
 
 First page: index.html
 
-Can be viewed at https://batch192.netlify.app/4/proj1/index.html
+jQuery used in:
+- index.html
+- register.html
+- return.html
 
-
-Problem statement:
-
-Online HelpDesk for COVID-19
----------------------------------------------
-Home page ------------Informations provided by Goverment
-Registration page for entering your symptoms
-Registration for Vacination
-View Doctor available in the Hospital
-Registration for Bed,bed type--ICU WITH OXYGEN/NORMAL BED 
-Registraion for Ambulance
------------------------------------------------------------------------------------------
-OR
------------------------------------------------------------------------------------------
-Online Shopping like Amazon
---------------------------------------------------
-Home page ------------Informations provided by amazon
-Registraion page
-Mens wear with 6 images and checkbox
-womens wear with 6 images and checkbox
-children wear with 6 images and checkbox
-Feedback page
-Return goods page
----------------------------------------------------------
+Can be viewed at https://batch192.netlify.app/6/proj1/index.html

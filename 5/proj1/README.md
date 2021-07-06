@@ -1,10 +1,10 @@
 # Batch 192
 
-Assignment 4 - Online shopping site
+Assignment 5 - Online shopping site + JS
 
 First page: index.html
 
-Can be viewed at https://batch192.netlify.app/4/proj1/index.html
+Can be viewed at https://batch192.netlify.app/5/proj1/index.html
 
 
 Problem statement:
