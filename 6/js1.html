@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 1</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var p = new Object();
+    p.age = 23;
+    p.name = "Roosafeed Koya";
+
+    document.write(p.name + " is " + p.age + " years old");
+
+    // class
+    var emp = class {
+        constructor(id, name) {
+            this.id = id;
+            this.name = name;
+        }
+        // methods
+        getDetails() {
+            return { 'id': this.id, 'name': this.name };
+        }
+    }
+
+    var a = new emp(123, 'John'),
+        b = new emp(324, 'Doe');
+
+    document.writeln('<br>' + a.getDetails().id + ' : ' + a.getDetails().name + '<br>');
+    document.writeln('<br>' + b.getDetails().id + ' : ' + b.getDetails().name + '<br>');
+
+    var comp = {
+        name: 'Mphasis',
+        place: 'Pune',
+        printn: function() {
+            return this.name + ', ' + this.place;
+        }
+    };
+
+    var f = comp.printn();
+    console.log(f);
+</script>
+
+</html>
