@@ -1,0 +1,99 @@
+body::before {
+    content: '';
+    background-color: var(--light);
+    background-image: url('https://images.unsplash.com/photo-1557821552-17105176677c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8b25saW5lJTIwc2hvcHBpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80');
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+li.dropdown {
+    cursor: pointer;
+}
+
+.carousel-inner .carousel-item img {
+    width: 100%;
+}
+
+.carousel-indicators li {
+    background-color: var(--dark);
+}
+
+.container:last-of-type,
+span.list-group-item {
+    background-color: rgba(100, 100, 100, 0.25);
+    padding: 20px;
+    border-radius: 10px !important;
+    box-shadow: 2px 2px 15px rgba(70, 70, 70, 0.35);
+    color: var(--light);
+}
+
+
+input[type="text"], input[type="email"], 
+input[type="number"], input[type="password"], select.custom-select,
+textarea.form-control {
+    background-color: rgba(70, 70, 70, 0.35);
+    color: var(--light);
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder, 
+input[type="number"]::placeholder, input[type="password"]::placeholder {
+    color: var(--light);
+}
+
+.carousel-caption {
+    color: var(--dark);
+    background-color: rgba(100, 100, 100, 0.15);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.spinner-border {
+    height: 4em;
+    width: 4em;
+    z-index: 10;
+    position: fixed;
+    margin: auto;
+    top: calc(50% - 2em);
+    left: calc(50% - 2em);
+}
+
+#loader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(70, 70, 70, 0.75);
+    z-index: 9;
+}
+
+.err-input {
+    border: solid 1px var(--red);
+    box-shadow: 1px 1px 5px var(--red);
+}
+
+.hide {
+    display: none;
+}
+
+button {
+    background-color: rgba(100, 100, 100, 0.1);
+    border: 2px solid rgba(100, 100, 100, 0.4);
+    border-radius: 5px;
+}
+
+button:active, button:focus {
+    outline: none !important;
+    border: 2px solid rgba(100, 100, 100, 0.7);
+}
+
+#terms div p{
+    width: 80%;
+    margin: auto;
+    height: 200px;
+    overflow-y: auto;
+}

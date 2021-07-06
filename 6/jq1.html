@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>jQuery</title>
+    <style>
+        #d1 {
+            height: 1em;
+            width: 0;
+            background-color: blueviolet;
+            transition: all 0.3s ease-in-out;
+            margin: 1.2em 0;
+        }
+
+        .w100 {
+            width: 100% !important;
+        }
+
+        input {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1"></div>
+    <button id="db1">Toggle DIV</button>
+
+    <br><br>
+
+    <input type="text" id="in1" /><br>
+    <button id="b2">Add</button> <button id="b3">Clear</button> <br>
+    <div id="d2"></div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('#db1').click(function () {
+            $('#d1').toggleClass('w100');
+        });
+
+        $('#in1').blur(function () {
+            $('#in1').val($('#in1').val().toUpperCase());
+        })
+
+        $('#b2').click(function () {
+            if ($('#in1').val() !== '') {
+                $('#d2').html($('#d2').html() + $('#in1').val() + '<br>');
+                $('#in1').val('');                
+            }
+            $('#in1').focus();
+        });
+
+        $('#b3').click(function(){
+            $('#d2').html('');
+        })
+    });
+</script>
+
+</html>

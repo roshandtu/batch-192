@@ -1,0 +1,85 @@
+<h1>Register</h1>
+
+<div class="container">
+    <div id="form-error-alert" class="alert alert-danger hide" role="alert">
+        <strong>Error</strong>
+        <p>Correct all the errors</p>
+    </div>
+
+    <div class="alert alert-info" role="alert">
+        <strong>Fiels marked with <span></span>* are required</strong>
+    </div>
+
+    <form name="feed-form" action="submit.html" class="needs-validation" novalidate>
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="fname" class="col-sm-1-12 col-form-label">Your Name*</label>
+            </div>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" name="fname" id="fname" placeholder="Your Name" required>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="email" class="col-sm-1-12 col-form-label">Email*</label>
+            </div>
+            <div class="col-sm-5">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email address" required>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="feedback" class="col-sm-1-12 col-form-label">Feedback</label>
+            </div>
+            <div class="col-sm-5">
+                <textarea class="form-control" rows="5" id="feedback" name="feedback"></textarea>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-5 custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="tc" name="tc" required>
+                <label for="tc" class="custom-control-label">I wish to be contacted on my email ID regarding this feedback</label>
+            </div>
+        </div>
+
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.querySelector('form[name="feed-form"]').addEventListener('submit', (e) => {
+
+        var em = document.querySelector('form[name="feed-form"]').querySelector('input[name="email"]'),
+            nam = document.querySelector('form[name="feed-form"]').querySelector('input[name="fname"]');
+
+        var l = [em, nam];
+
+        var errCount = 0;
+        for (var i = 0; i < l.length; i++) {
+            if (l[i].value == "") {
+                l[i].classList.add('err-input');
+                errCount++;
+            }
+            else {
+                l[i].classList.remove('err-input');
+            }
+        }
+
+        if (errCount > 0) {
+            e.preventDefault();
+            document.getElementById('form-error-alert').classList.remove('hide');
+        }
+        else {
+            document.getElementById('form-error-alert').classList.add('hide');
+        }
+    })
+</script>

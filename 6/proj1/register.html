@@ -1,0 +1,193 @@
+<h1>Register</h1>
+
+<div class="container">
+    <div id="form-error-alert" class="alert alert-danger hide" role="alert">
+        <strong>Error</strong>
+        <p>Correct all the errors</p>
+        <p class="hide" id="tc-error">Please accept the terms and conditions</p>
+    </div>
+    <div class="alert alert-info" role="alert">
+        <strong>Fiels marked with <span></span>* are required</strong>
+    </div>
+
+    <form name="reg-form" action="submit.html" class="needs-validation" novalidate>
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="fname" class="col-sm-1-12 col-form-label">First Name*</label>
+            </div>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" name="fname" id="fname" placeholder="First Name" required>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="lname" class="col-sm-1-12 col-form-label">Last Name</label>
+            </div>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" name="fname" id="lname" placeholder="Last Name">
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="email" class="col-sm-1-12 col-form-label">Email*</label>
+            </div>
+            <div class="col-sm-5">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email address" required>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="pass" class="col-sm-1-12 col-form-label">Password*</label>
+            </div>
+            <div class="col-sm-5">
+                <input type="password" class="form-control" name="pass" id="reg-pass" placeholder="Create a password"
+                    required>
+                <button type="button" id="see-pass">See Password</button>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="mob" class="col-sm-1-12 col-form-label">Mobile Number*</label>
+            </div>
+            <div class="col-sm-5">
+                <input type="number" class="form-control" name="mob" id="mob" placeholder="Mobile Number" required>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <label for="addr" class="col-sm-1-12 col-form-label">Address</label>
+            </div>
+            <div class="col-sm-5">
+                <textarea class="form-control" rows="5" id="addr" name="addr"></textarea>
+            </div>
+        </div>
+
+        <div class="row mt-2" id="terms">
+            <div class="col">
+                <p>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                    deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+                    provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+                    fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis
+                    est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis
+                    voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis
+                    aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
+                    recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus
+                    maiores alias consequatur aut perferendis doloribus asperiores repellat.
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                    deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+                    provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+                    fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis
+                    est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis
+                    voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis
+                    aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
+                    recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus
+                    maiores alias consequatur aut perferendis doloribus asperiores repellat.
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                    deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+                    provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+                    fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis
+                    est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis
+                    voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis
+                    aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
+                    recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus
+                    maiores alias consequatur aut perferendis doloribus asperiores repellat.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-5 custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="tc" name="tc" required>
+                <label for="tc" class="custom-control-label">I agree to the terms and conditions</label>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-sm-3">
+                <button type="submit" class="btn btn-primary">Register</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<script>
+    document.querySelector('form[name="reg-form"]').addEventListener('submit', (e) => {
+
+        var uname = document.querySelector('form[name="reg-form"]').querySelector('input[name="fname"]'),
+            pass = document.querySelector('form[name="reg-form"]').querySelector('input[name="pass"]'),
+            em = document.querySelector('form[name="reg-form"]').querySelector('input[name="email"]'),
+            mob = document.querySelector('form[name="reg-form"]').querySelector('input[name="mob"]');
+
+        var tc = document.querySelector('form[name="reg-form"]').querySelector('input[name="tc"]').checked;
+
+        var l = [uname, pass, em, mob];
+
+        var errCount = 0;
+        for (var i = 0; i < l.length; i++) {
+            if (l[i].value == "") {
+                l[i].classList.add('err-input');
+                errCount++;
+            }
+            else {
+                l[i].classList.remove('err-input');
+            }
+
+            if (l[i].type == 'number' && l[i].value.length != 10) {
+                l[i].classList.add('err-input');
+                errCount++;
+            }
+            else if (l[i].type == 'number' && l[i].value.length == 10) {
+                l[i].classList.remove('err-input');
+            }
+        }
+
+        if (tc == false) {
+            errCount++;
+            document.getElementById('tc-error').classList.remove('hide');
+        }
+        else {
+            document.getElementById('tc-error').classList.add('hide');
+        }
+
+        if (errCount > 0) {
+            e.preventDefault();
+            document.getElementById('form-error-alert').classList.remove('hide');
+        }
+        else {
+            document.getElementById('form-error-alert').classList.add('hide');
+        }
+    })
+
+    $(document).ready(function () {
+        $('#see-pass').click(function () {
+            var t = $('#reg-pass').attr('type');
+            if (t == "password") {
+                $('#reg-pass').attr('type', 'text');
+                $('#see-pass').text('Hide Password');
+            }
+            else {
+                $('#reg-pass').attr('type', 'password');
+                $('#see-pass').text('See Password');
+            }
+        });
+    });
+
+    $(document).ready(function () {
+        $('#tc').change(function () {
+            if ($('#tc').is(":checked")) {
+                $('#terms').hide();
+            }
+            else {
+                $('#terms').show();
+            }
+        });
+    });
+</script>
