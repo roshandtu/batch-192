@@ -19,8 +19,22 @@ public class HashMaps {
 		System.out.println(hs);
 		
 		System.out.println("Key set: " + hs.keySet());
-		System.out.println("Containes key 1: " + hs.containsKey(1));
-		System.out.println("Contains value Apple: " + hs.containsValue("Apple") + ", apple: " + hs.containsValue("apple"));
+		System.out.println(hs.keySet().toArray()[7]);
+//		System.out.println("Containes key 1: " + hs.containsKey(1));
+//		System.out.println("Contains value Apple: " + hs.containsValue("Apple") + ", apple: " + hs.containsValue("apple"));
+		
+//		System.out.print("Enter a key: ");
+//		Scanner sc = new Scanner(System.in);
+//		int key = sc.nextInt();
+		
+		
+		
+//		for(Map.Entry<Integer, String> en: hs.entrySet()) {
+//			if(en.getKey() == key) {
+//				System.out.println("The value is " + en.getValue());
+//			}
+//		}
+		
 		
 	}
 }
