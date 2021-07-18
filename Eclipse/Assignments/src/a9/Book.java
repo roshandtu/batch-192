@@ -1,4 +1,5 @@
-package day9java.assg1;
+package a9;
+
 import java.util.*;
 
 public class Book {
