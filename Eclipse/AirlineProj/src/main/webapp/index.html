@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
+    <title>Airline - Home</title>
+</head>
+<body>
+    <div id="navbar">
+        <div></div>
+        <ul>
+            <li data-selected="true"><a href="#">Home</a></li>
+            <li><a href="cancel.html">Cancel Flight</a></li>
+            <li><a href="aboout.html">About Us</a></li>
+            <li><a href="admin.jsp">Admin</a></li>
+        </ul>
+    </div>
+
+    <div class="cont" id="cont-1">
+        <div id="book-cont" class="action-cont">
+            <div></div>
+            <h1>Book a Flight</h1>
+            <form action="Book" method="post">
+                <div class="hor-flex w-100">
+                    <div class="hor-flex w-50">
+                        <label class="radio-label"> One Way
+                            <input type="radio" name="trip" value="oneway" required checked="checked">
+                            <span class="cust-radio"></span>
+                        </label>
+                    </div>
+                    <div class="hor-flex w-50">
+                        <label class="radio-label"> Round Trip
+                            <input type="radio" name="trip" value="round" required>
+                            <span class="cust-radio"></span>
+                        </label>                        
+                    </div>
+                </div>                
+                <br>
+                <label for="from">From</label>
+                <select name="from" id="from">
+                    <option value="">Loading...</option>
+                </select>
+                <label for="to">From</label>
+                <select name="to" id="to">
+                    <option value="">Loading...</option>
+                </select>
+                <div class="hor-flex w-100">
+                    <div class="ver-flex w-50">
+                        <label for="dep-date">Departure Date</label>
+                        <input type="date" name="dep-date" id="dep-date">
+                    </div>
+                    <div class="ver-flex w-50">
+                        <label for="ret-date">Return Date</label>
+                        <input type="date" name="ret-date" id="ret-date">
+                    </div> 
+                </div>                             
+                <label for="passenger-count">Number of Passengers</label>
+                <input type="number" name="passenger-count" id="passenger-count"> <br>
+                <div class="hor-flex w-100">   
+                	<div class="w-50">
+                        <input type="submit" value="Search Flights" name="search">
+                    </div>
+                    <div class="w-50">
+                        <input class="secondary" type="submit" value="View All Flights" name="search">
+                    </div>                               
+                </div>                
+            </form>
+        </div>
+    </div>
+</body>
+
+
+</html>

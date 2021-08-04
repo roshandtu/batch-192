@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="bank.entity">
+	
+	<!-- class to table mapping -->
+	<class name="Account" table="BAccount">
+
+		<id name="accno" type="int" />
+		<property name="name" type="string" />
+		<property name="bal" column="balance" type="float" />
+		<property name="mob" column="phone" type="string" />
+		<property name="email" type="string" />	
+
+	</class>
+	
+	
+</hibernate-mapping>
+

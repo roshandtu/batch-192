@@ -1,0 +1,21 @@
+input {
+    margin: 5px 0;
+    font-size: 1.2em;
+    padding: 5px;
+}
+form {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    min-width: 400px;
+    flex-wrap: wrap;
+}
+
+p {
+    width: 20%;
+    margin: auto 0;
+}
+
+input[type='text'], input[type='password'], input[type='number'] {
+    width: 75%;
+}

@@ -10,15 +10,31 @@
 package jdbcDay1;
 
 import java.sql.*;
+import java.util.*;
 
 public class JDBCEx1 {
 	public static void main(String[] args) throws Exception {
 		
 		Class.forName("oracle.jdbc.driver.OracleDriver");//loading the driver
 		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe","mphasis","1234");
-		Statement st = con.createStatement();
-//		st.execute("begin ins_emps('Nima', 9650880011, 25000, 2); end;");
-		st.execute("update employees set salary = salary - 500 where empno = 104");
-		System.out.println("successful");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Employee ID: ");
+		int id = sc.nextInt();
+		System.out.print("New Salary: ");
+		int sal = sc.nextInt();
+				
+		PreparedStatement st = con.prepareStatement("UPDATE employees SET salary=? WHERE empno=?");
+		st.setInt(1, sal);
+		st.setInt(2, id);
+		
+		if(!st.execute()) {
+			if(st.getUpdateCount() > 0) {
+				System.out.println("successfully updated");
+			}
+		}
+		
+		
 	}    
 }

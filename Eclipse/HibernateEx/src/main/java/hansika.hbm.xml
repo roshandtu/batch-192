@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//hibernate/hibernate mapping dtd2.0//en"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="mypojo" table="login">
+		<id name="empno" column="empno" type="int">
+			<generator class="sequence">
+				<param name="sequence">EMPNO_SEQ</param>
+			</generator>
+		</id>
+		<property name="uname" column="uname" type="string" />
+		<property name="pword" type="string" column="pword" />
+		<property name="desig" type="string" column="desig" />
+		<property name="addr" type="string" column="addr" />
+		<property name="email" type="string" column="email" />
+		<property name="mob" type="string" column="mob" />
+	</class>
+</hibernate-mapping>

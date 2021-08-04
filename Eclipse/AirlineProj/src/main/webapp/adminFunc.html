@@ -1,0 +1,25 @@
+<form action="admin.jsp" method="post">
+    <fieldset>
+        <legend>Flight Details</legend>
+        <label for="fl_num">Flight Number</label>
+        <input type="text" name="fl_num" id="fl_num">
+        <label for="fl_origin">Flight Origin (Code)</label>
+        <input type="text" name="fl_origin" id="fl_origin">
+        <label for="fl_dest">Flight Destination (Code)</label>
+        <input type="text" name="fl_dest" id="fl_dest">
+        <label for="fl_date">Flight Date</label>
+        <input type="date" name="fl_date" id="fl_date">
+    </fieldset>
+    <fieldset>
+        <legend>Fare Details</legend>
+        <label for="curr">Currency</label>
+        <select name="curr" id="curr">
+            <option value="INR">INR</option>
+            <option value="USD">USD</option>
+        </select>
+        <label for="fare">Price of a ticket</label>
+        <input type="number" name="fare" id="fare">
+    </fieldset>
+
+    <input type="submit" value="Add Flight" name="fl_add">
+</form>

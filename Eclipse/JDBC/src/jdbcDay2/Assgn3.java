@@ -25,10 +25,10 @@ public class Assgn3 {
 		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:xe", "mphasis", "1234");
 		
 		
-		PreparedStatement newAcc = conn.prepareStatement("INSERT INTO bank VALUES (accnumber.nextval, ?, ?)");
-		PreparedStatement up = conn.prepareStatement("UPDATE bank SET bal = ? WHERE accno = ?");
-		PreparedStatement del = conn.prepareStatement("DELETE FROM bank WHERE accno = ?");
-		PreparedStatement getBal = conn.prepareStatement("SELECT bal FROM bank WHERE accno = ?");
+		PreparedStatement newAcc = conn.prepareStatement("INSERT INTO bank2 VALUES (accnumber.nextval, ?, ?)");
+		PreparedStatement up = conn.prepareStatement("UPDATE bank2 SET bal = ? WHERE accno = ?");
+		PreparedStatement del = conn.prepareStatement("DELETE FROM bank2 WHERE accno = ?");
+		PreparedStatement getBal = conn.prepareStatement("SELECT bal FROM bank2 WHERE accno = ?");
 		Statement st = conn.createStatement();
 		ResultSet rs;
 		
@@ -70,20 +70,25 @@ public class Assgn3 {
 						getBal.setInt(1, accno);
 						getBal.execute();
 						rs = getBal.getResultSet();
-						rs.next();
-						bal = rs.getInt(1);
-						System.out.println("Avaliable Balance: " + bal);
-						System.out.print("Deposit Amount: ");
-						amt = sc.nextInt();
-						bal += amt;
-						
-						up.setInt(1, bal);
-						up.setInt(2, accno);
-						if(!up.execute()) {
-							if(up.getUpdateCount() > 0) {
-								System.out.println(amt + " credited. Available balance is " + bal);
+						if(rs.next()) {
+							bal = rs.getInt(1);
+							System.out.println("Avaliable Balance: " + bal);
+							System.out.print("Deposit Amount: ");
+							amt = sc.nextInt();
+							bal += amt;
+							
+							up.setInt(1, bal);
+							up.setInt(2, accno);
+							if(!up.execute()) {
+								if(up.getUpdateCount() > 0) {
+									System.out.println(amt + " credited. Available balance is " + bal);
+								}
 							}
-						}						
+						}
+						else {
+							System.out.println("Invalid A/C number");
+						}
+												
 						break;
 				
 				case 3: System.out.println("Withdraw");
@@ -93,24 +98,29 @@ public class Assgn3 {
 						getBal.setInt(1, accno);
 						getBal.execute();
 						rs = getBal.getResultSet();
-						rs.next();
-						bal = rs.getInt(1);
-						System.out.println("Avaliable Balance: " + bal);
-						System.out.print("Withdraw Amount: ");
-						amt = sc.nextInt();
-						if (amt < bal) {
-							bal -= amt;							
-							up.setInt(1, bal);
-							up.setInt(2, accno);
-							if(!up.execute()) {
-								if(up.getUpdateCount() > 0) {
-									System.out.println(amt + " debited. Available balance is " + bal);
+						if(rs.next()) {
+							bal = rs.getInt(1);
+							System.out.println("Avaliable Balance: " + bal);
+							System.out.print("Withdraw Amount: ");
+							amt = sc.nextInt();
+							if (amt < bal) {
+								bal -= amt;							
+								up.setInt(1, bal);
+								up.setInt(2, accno);
+								if(!up.execute()) {
+									if(up.getUpdateCount() > 0) {
+										System.out.println(amt + " debited. Available balance is " + bal);
+									}
 								}
+							}
+							else {
+								System.out.println("Insufficient balance");
 							}
 						}
 						else {
-							System.out.println("Insufficient balance");
-						}							
+							System.out.println("Invalid A/C number");
+						}
+													
 						break;
 				
 				case 4: System.out.println("Delete An Account");
@@ -143,7 +153,7 @@ public class Assgn3 {
 				case 6: //list all accounts
 						System.out.println(pad("A/C No", 6) + "\t" + pad("Name", 20) + "\t" + "Balance");
 						System.out.println("----------------------------------------");
-						rs = st.executeQuery("SELECT * FROM bank");
+						rs = st.executeQuery("SELECT * FROM bank2");
 						while(rs.next()) {
 							System.out.println(pad(rs.getString(1), 6) + "\t" + pad(rs.getString(2), 20) + "\t" + rs.getString(3));
 						}
