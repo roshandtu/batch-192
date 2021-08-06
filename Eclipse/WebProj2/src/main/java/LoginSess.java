@@ -16,6 +16,8 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/LoginSess")
 public class LoginSess extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -24,6 +26,8 @@ public class LoginSess extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
+    
+    
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -43,7 +47,9 @@ public class LoginSess extends HttpServlet {
 		else {
 			res.sendRedirect("login1.html");
 		}	
+		
 	}
+	
 
 }
 
