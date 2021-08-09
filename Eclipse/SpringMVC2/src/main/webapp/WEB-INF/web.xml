@@ -11,7 +11,6 @@
 
 	<servlet-mapping>
 		<servlet-name>spring</servlet-name>
-		<url-pattern>*.xyz</url-pattern>
 		<url-pattern>*.html</url-pattern>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>

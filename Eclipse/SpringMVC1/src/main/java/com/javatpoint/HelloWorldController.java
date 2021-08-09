@@ -63,7 +63,7 @@ public class HelloWorldController
 	@RequestMapping("/loginCtrl")  
 	public ModelAndView helloWorld3(HttpServletRequest request,HttpServletResponse res) throws IOException 
 	{  
-		PrintWriter pw = res.getWriter();
+//		PrintWriter pw = res.getWriter();
 		res.setContentType("text/html");
 		String empno = request.getParameter("empno"),
 				name = request.getParameter("name"),
