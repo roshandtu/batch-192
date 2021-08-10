@@ -1,0 +1,84 @@
+#ch-form-cont {
+    position: relative;
+    left: 20%;
+    min-width: max-content;
+    width: 45%;
+}
+
+#checkout-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+#checkout-form input, #checkout-form textarea, #checkout-form select {
+    width: 60%;
+    max-width: 300px;
+    padding: 7px 20px;
+    margin: 2px 2px;
+}
+
+#checkout-form input[name="ch-cardno"] {
+    letter-spacing: 4px;
+}
+
+#checkout-form button {
+    background: #ee3e0f;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#checkout-form #ch-cardexp {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#checkout-form #ch-cardexp input {
+    width: calc(6em + 10px);
+}
+
+#checkout-form fieldset {
+    border-top: 1px dotted black;
+    padding: 8px 10px;
+}
+
+#checkout-form fieldset legend {
+    font-size: 1em;
+    width: fit-content;
+}
+
+@media (max-width: 767px) {
+    #ch-form-cont {
+        width: 75%;
+    }
+
+    #checkout-form button {
+        background: white;
+        color: #ee3e0f;
+        padding: 10px 20px;
+        font-weight: bold;
+        font-size: 1.2em;
+        border: 0;
+    }
+
+    #checkout-form > input, #checkout-form > textarea, #checkout-form > select {
+        width: 100%;
+        border: 0;
+    }
+    
+    #checkout-form  input {
+    	border: 0;
+    }
+
+    #checkout-form fieldset {
+        border-top: 1px dotted white;
+    }
+
+    #checkout-form fieldset legend {
+        color: white;
+    }
+}
