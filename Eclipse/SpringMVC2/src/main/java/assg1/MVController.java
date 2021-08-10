@@ -1,3 +1,11 @@
+//Assignment 2 - Spring MVC
+/* 
+create table empregistration.
+create a registration page .after registration it should redirect to login page.
+if login is success then display success page else display failure page
+*/
+
+
 package assg1;
 
 import java.io.IOException;
